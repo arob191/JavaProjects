@@ -81,6 +81,15 @@ public class TicTacToe extends Application{
 				
 			}
 		}
+		
+		public boolean isFull() { //Method to check if all cells are full in case of scratched game
+			for (int i =0; i < 3; i++)
+				for (int j = 0; j < 3; j++)
+					if (cell[i][j].getToken() == ' ')
+						return false;
+			return true;
+		}
+		
 		public boolean isWon(char token) { //Method to set the game condition. 
 			for (int i = 0; i < 3; i++) //Checking if there is 3 in a row
 				if (cell[i][0].getToken() == token
@@ -112,10 +121,16 @@ public class TicTacToe extends Application{
 			if (token == ' ' && whoseTurn != ' ') {
 				setToken(whoseTurn); 
 				if (isWon(whoseTurn)) { //Checking our is won flag
+					lblStatus.setText(whoseTurn + " won! The game is over!");
+					whoseTurn = ' ';
+				}
+				else if (isFull()) {
+					lblStatus.setText("Draw! The game is over");//End game if all cells are full
 					whoseTurn = ' ';
 				}
 				else {
 					whoseTurn = (whoseTurn == 'X') ? 'O' : 'X';	
+					lblStatus.setText(whoseTurn + "'s turn"); //If game has not ended let the player's know who's turn it is
 				}
 			}
 			
