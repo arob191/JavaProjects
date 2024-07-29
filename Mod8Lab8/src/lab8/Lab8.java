@@ -1,10 +1,10 @@
 /*
  * Austin Robertson
- * Module 6 Lab 6
- * 07/18/2024
+ * Module 8 Lab 8
+ * 07/28/2024
  * COSC 1174
- * This is a program created for Lab 66 of Module 6
- * This program users the scanner and filename classes to input user data and read through text files containing a list of the most popular baby names between 2001-2010
+ * This is a program created for Lab 8 of Module 8
+ * This program explores the use of dynamic arrays to pair index values of words and pronunciations. 
  */
 
 package lab8;
