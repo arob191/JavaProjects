@@ -22,7 +22,7 @@ public class Main {
       - Inheritance: None
 
       Purpose:
-      - Runs the main code
+      - Used for running the main code
 
       Constants and Variables:
       - Constants: None
