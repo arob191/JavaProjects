@@ -105,20 +105,3 @@ public class Main {
         }
     }
 }
-
-
-
-
-
-
-
-//        for (int i = 0; i < list.size() - 1; i++) { // Our outer loop to iterate through our list
-//            for (int j = i + 1; j < list.size(); j++) { // Inner loop to compare the elements, grabs our current and the following element
-//                if (list.get(i).compareTo(list.get(j)) > 0) { // Compare our elements to each out
-//                    // Swap elements if needed
-//                    E temp = list.get(i); // Set our temp element
-//                    list.set(i, list.get(j)); // Set the element in position i as element j
-//                    list.set(j, temp); // Set our element at position j as element i (temp)
-//                }
-//            }
-//        }
