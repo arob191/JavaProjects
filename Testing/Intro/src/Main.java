@@ -287,5 +287,43 @@ public class Main {
 //        for(String i : moreAnimals) {
 //            System.out.println(i);
 //        }
+//
+//        // printf() = an optional method to control, format and display text
+//        //two arguments = format string + (object/variable/value)
+//        // % [flags] [precision] [width] [conversion-character]
+//        System.out.printf("This is a format string %d", 123);
+//        System.out.printf("%d This is a format string", 123);
+//
+//        boolean result = true;
+//        char myChar = '@';
+//        String myString = "Austin";
+//        int myInt = 50;
+//        double myDouble = 1000;
+//
+//        //Changing the conversion-character depending on the datatype
+//        System.out.printf("%b", result);
+//        System.out.printf("%c", myChar);
+//        System.out.printf("%s", myString);
+//        System.out.printf("%d", myInt);
+//        System.out.printf("%f", myDouble);
+//        System.out.println();
+//
+//        //Changing the width between the displayed value
+//        System.out.printf("Hello %10s", myString);
+//        System.out.println();
+//
+//
+//        //Changing the precision
+//        System.out.printf("You have %.2f dollars", myDouble);
+//        System.out.println();
+//
+//        //Flags will add effects
+//        // - : left-justify
+//        // + : output a plus or minus sign for a numeric value
+//        // 0 : numeric values are zero-padded
+//        // , : comma grouping separator if numbers > 1000
+//        System.out.printf("You have %+,.2f dollars", myDouble);
+
+
     }
 }
