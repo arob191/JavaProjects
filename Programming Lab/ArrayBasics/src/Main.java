@@ -36,6 +36,7 @@ public class Main {
         System.out.println("The min is: " + min);
     }
 
+    //Main code
     public static void main(String[] args) {
 
         //Declare our arrays
