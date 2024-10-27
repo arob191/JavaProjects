@@ -1,10 +1,10 @@
 /**
  Austin Robertson
  COSC 2336-01
- Programming Assignment 5
+ Programming Assignment 6
  Due: 10/23/2024
  Submitted: 10/23/2024
-Use a min-heap class to sort int arrays and string arrays
+Use a min-heap structure to sort int arrays and string arrays
  */
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ import java.util.Arrays;
  * Constants and Variables:
  * - Constants: None
  * - Variables:
- *   - private ArrayList<T> heap: Holds the elements of the heap.
+ *   - ArrayList<T> heap: Holds the elements of the heap.
  *
  * Constructors:
  * - MinHeap(T[] array):
@@ -40,7 +40,7 @@ class MinHeap<T extends Comparable<T>> {
     //Constructor to initialize the heap with the array
     public MinHeap(T[] array) {
         heap = new ArrayList<>(Arrays.asList(array)); //cast our array to arraylist
-        buildMinHeap();
+        buildMinHeap(); //Call our build mini heap method
     }
 
     //Method to get the size of the heap
@@ -76,11 +76,11 @@ class MinHeap<T extends Comparable<T>> {
 
         //Set the smallest element as the root
         if (left < heap.size() && heap.get(left).compareTo(heap.get(smallest)) < 0) {
-            smallest = left;
+            smallest = left; //Check left
         }
 
         if (right < heap.size() && heap.get(right).compareTo(heap.get(smallest)) < 0) {
-            smallest = right;
+            smallest = right; //Check right
         }
 
         //Recursive call our method if the smallest is not the root.
