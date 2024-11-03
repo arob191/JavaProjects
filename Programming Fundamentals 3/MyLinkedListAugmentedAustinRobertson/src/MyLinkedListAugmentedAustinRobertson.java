@@ -15,7 +15,7 @@ class TestStackQueue {
         stack.push("Tom"); // Push Tom to the stack
         System.out.println("(1) " + stack);
 
-        stack.push("Susan"); // Push Susan to the the stack
+        stack.push("Susan"); // Push Susan to the stack
         System.out.println("(2) " + stack);
 
         stack.push("Kim"); // Push it to the stack
