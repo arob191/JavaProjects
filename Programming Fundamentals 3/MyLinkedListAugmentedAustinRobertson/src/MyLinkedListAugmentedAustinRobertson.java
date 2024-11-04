@@ -1,6 +1,40 @@
+/**
+ Austin Robertson
+ COSC 2336-01
+ Programming Assignment 7
+ Due: 11/06/2024
+ Submitted: 11/05/2024
+ Manipulate a generic stack
+ */
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
+
+/**
+ * The MyLinkedListAugmentedAustinRobertson class is used for our main code.
+ *
+ * Class Information:
+ * - Name: MyLinkedListAugmentedAustinRobertson
+ * - Dependencies:
+ *   - java.util.ArrayList
+ *   - java.util.Arrays
+ *   - java.util.Scanner;
+ * - Package: None
+ * - Inheritance: None
+ *
+ * Purpose:
+ * - To build and manipulate a generic stack object.
+ *
+ * Constants and Variables:
+ * - Constants: None
+ * - Variables:
+ *   - MyLinkedListExtra<String> stack: Stack that holds our elements
+ *   - String[] names: Temporary string array to import our initial elements to our stack
+ *
+ * Constructors:
+ * - Default Constructor
+ */
 
 public class MyLinkedListAugmentedAustinRobertson {
     public static void main(String[] args) {
@@ -40,6 +74,31 @@ public class MyLinkedListAugmentedAustinRobertson {
         System.out.println("Last Index of George: " + stack.lastIndex("George"));
     }
 }
+
+/**
+ * The MyLinkedListAugmentedAustinRobertson class is used for our main code.
+ *
+ * Class Information:
+ * - Name: MyLinkedListAugmentedAustinRobertson
+ * - Dependencies:
+ *   - java.util.ArrayList
+ *   - java.util.Arrays
+ *   - java.util.Scanner;
+ * - Package: None
+ * - Inheritance: None
+ *
+ * Purpose:
+ * - To build and manipulate a generic stack object.
+ *
+ * Constants and Variables:
+ * - Constants: None
+ * - Variables:
+ *   - MyLinkedListExtra<String> stack: Stack that holds our elements
+ *   - String[] names: Temporary string array to import our initial elements to our stack
+ *
+ * Constructors:
+ * - Default Constructor
+ */
 
 class GenericStack<E> {
     private LinkedList<E> list = new LinkedList<>();
@@ -93,6 +152,31 @@ class GenericStack<E> {
         Arrays.asList(items).forEach(this::push); //Now we don't have to manually add each element
     }
 }
+
+/**
+ * The MyLinkedListAugmentedAustinRobertson class is used for our main code.
+ *
+ * Class Information:
+ * - Name: MyLinkedListAugmentedAustinRobertson
+ * - Dependencies:
+ *   - java.util.ArrayList
+ *   - java.util.Arrays
+ *   - java.util.Scanner;
+ * - Package: None
+ * - Inheritance: None
+ *
+ * Purpose:
+ * - To build and manipulate a generic stack object.
+ *
+ * Constants and Variables:
+ * - Constants: None
+ * - Variables:
+ *   - MyLinkedListExtra<String> stack: Stack that holds our elements
+ *   - String[] names: Temporary string array to import our initial elements to our stack
+ *
+ * Constructors:
+ * - Default Constructor
+ */
 
 //MyLinkedListExtra class that extends our GenericStack class
 class MyLinkedListExtra<E> extends GenericStack<E> {
