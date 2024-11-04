@@ -1,50 +1,43 @@
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.Scanner;
 
-public class MyLinkedListAugmentedAustinRobertson extends TestStackQueue {
+public class MyLinkedListAugmentedAustinRobertson {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
-}
+        Scanner scanner = new Scanner(System.in);
 
-class TestStackQueue {
-    public static void main(String[] args) {
-        // Create a stack
-        GenericStack<String> stack = new GenericStack<>();
+        //Initialize our stack
+        MyLinkedListExtra<String> stack = new MyLinkedListExtra<>();
 
-        // Add elements to the stack
-        stack.push("Tom"); // Push Tom to the stack
-        System.out.println("(1) " + stack);
+        //Create a string array with our elements
+        String[] names = {"Jane","Kathy","Jenny","Ella","Jane","George",
+                          "Cheryl","Stevie","George","Alice","Jim","Mike"};
 
-        stack.push("Susan"); // Push Susan to the stack
-        System.out.println("(2) " + stack);
+        //Add the elements in our string array to our stack
+        stack.addAll(names);
 
-        stack.push("Kim"); // Push it to the stack
-        stack.push("Michael"); // Push Michael to the stack
-        System.out.println("(3) " + stack);
+        //Print the elements in our stack
+        System.out.println(stack);
 
-        // Remove elements from the stack
-        System.out.println("(4) " + stack.pop());
-        System.out.println("(5) " + stack.pop());
-        System.out.println("(6) " + stack);
+        //Ask the user for a name to add to the stack
+        System.out.print("Enter a name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter an index at which to store the name: ");
+        int index = scanner.nextInt();
+        stack.set(index, name);
 
-        // Create a queue
-        GenericQueue<String> queue = new GenericQueue<>();
+        //Print revised list:
+        System.out.println(stack);
 
-        // Add elements to the queue
-        queue.enqueue("Tom"); // Add Tom to the queue
-        System.out.println("(7) " + queue);
+        //Call our contains method for the user inputted name
+        System.out.println("List contains " + name + ": " + stack.contains(name));
 
-        queue.enqueue("Susan"); // Add Susan to the queue
-        System.out.println("(8) " + queue);
+        //Call our index of method
+        System.out.println("Item at index " + index + ": " + stack.getElement(index));
 
-        queue.enqueue("Kim"); // Add Kim to the queue
-        queue.enqueue("Michael"); // Add Michael to the queue
-        System.out.println("(9) " + queue);
-
-        // Remove elements from the queue
-        System.out.println("(10) " + queue.dequeue());
-        System.out.println("(11) " + queue.dequeue());
-        System.out.println("(12) " + queue);
+        //Call our index and last index of for George
+        System.out.println("Index of George: " + stack.getIndex("George"));
+        System.out.println("Last Index of George: " + stack.lastIndex("George"));
     }
 }
 
@@ -59,25 +52,68 @@ class GenericStack<E> {
         return list.removeFirst();
     }
 
+    public int getSize() {
+        return list.size();
+    }
+
     @Override
     public String toString() {
         return list.toString();
+    }
+
+    //Additional Methods
+
+    //Contains method returns true or false
+    public boolean contains(E item) {
+        return list.contains(item);
+    }
+
+    //Get method returns the index of the element
+    public int getIndex(E item) {
+        return list.indexOf(item);
+    }
+
+    //Method that gets the element at the specified index
+    public E getElement(int index){
+        return list.get(index);
+    }
+
+    //Method returns the last occurrence index of the specified element
+    public int lastIndex(E item) {
+        return list.lastIndexOf(item);
+    }
+
+    //Set method inserts the element into the desired index and shifts the rest of the elements down
+    public void set(int index, E item) {
+        list.add(index, item);
+    }
+
+    //Method to push all of our items in our string array to our stack
+    public void addAll(E[] items){
+        Arrays.asList(items).forEach(this::push); //Now we don't have to manually add each element
     }
 }
 
-class GenericQueue<E> {
-    private LinkedList<E> list = new LinkedList<>();
-
-    public void enqueue(E item) {
-        list.addLast(item);
+//MyLinkedListExtra class that extends our GenericStack class
+class MyLinkedListExtra<E> extends GenericStack<E> {
+    @Override
+    public void push(E item) {
+        super.push(item);
     }
 
-    public E dequeue() {
-        return list.removeFirst();
+    @Override
+    public E pop() {
+        E item = super.pop();
+        return item;
+    }
+
+    @Override
+    public boolean contains(E item) {
+        return super.contains(item);
     }
 
     @Override
     public String toString() {
-        return list.toString();
+        return super.toString();
     }
 }
