@@ -76,28 +76,26 @@ public class MyLinkedListAugmentedAustinRobertson {
 }
 
 /**
- * The MyLinkedListAugmentedAustinRobertson class is used for our main code.
+ * The GenericStack class is going to be the superclass of the MyLinkedListExtra class.
  *
  * Class Information:
- * - Name: MyLinkedListAugmentedAustinRobertson
+ * - Name: GenenericStack
  * - Dependencies:
  *   - java.util.ArrayList
  *   - java.util.Arrays
- *   - java.util.Scanner;
  * - Package: None
  * - Inheritance: None
  *
  * Purpose:
- * - To build and manipulate a generic stack object.
+ * - Implements a generic stack data structure using a LinkedList
  *
  * Constants and Variables:
  * - Constants: None
  * - Variables:
- *   - MyLinkedListExtra<String> stack: Stack that holds our elements
- *   - String[] names: Temporary string array to import our initial elements to our stack
+ *      - private LinkedList<E>
  *
  * Constructors:
- * - Default Constructor
+ *  - GenericStack(): Initializes an empty stack
  */
 
 class GenericStack<E> {
@@ -154,31 +152,25 @@ class GenericStack<E> {
 }
 
 /**
- * The MyLinkedListAugmentedAustinRobertson class is used for our main code.
+ * The MyLinkedListExtra class extends the super class GenericStack
  *
  * Class Information:
- * - Name: MyLinkedListAugmentedAustinRobertson
- * - Dependencies:
- *   - java.util.ArrayList
- *   - java.util.Arrays
- *   - java.util.Scanner;
+ * - Name: MyLinkedListExtra
+ * - Dependencies: None
  * - Package: None
- * - Inheritance: None
+ * - Inheritance: Extends GenericStack
  *
  * Purpose:
- * - To build and manipulate a generic stack object.
+ * - Extends the functionality of the GenericStack class and overrides the methods used in the super class
  *
  * Constants and Variables:
  * - Constants: None
- * - Variables:
- *   - MyLinkedListExtra<String> stack: Stack that holds our elements
- *   - String[] names: Temporary string array to import our initial elements to our stack
+ * - Variables: Inherits from GenericStack
  *
  * Constructors:
- * - Default Constructor
+ * - MyLinkedListExtra(): Inherits the default constructor from the GenericStack class
  */
 
-//MyLinkedListExtra class that extends our GenericStack class
 class MyLinkedListExtra<E> extends GenericStack<E> {
     @Override
     public void push(E item) {
