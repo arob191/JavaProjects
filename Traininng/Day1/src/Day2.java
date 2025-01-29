@@ -5,7 +5,7 @@ public class Day2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please provide one word: ");
-        String userWord = scanner.nextLine();)
+        String userWord = scanner.nextLine();
 
         System.out.println("You typed in: " + userWord);
 
